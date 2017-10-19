@@ -12,7 +12,7 @@ public class Application {
         FauteuilRoulant a1 = new FauteuilRoulant("0001", "Luigi", "", 37, 10, 35, 50);
         FauteuilRoulant a2 = new FauteuilRoulant("0002", "Mario", "", 37, 10, 35, 50);
         FauteuilRoulant a3 = new FauteuilRoulant("0003", "OldRepublic", "", 37, 10, 35, 50);
-        LitMedicalise a4 = new LitMedicalise("0004", "toto", "", 37, 10, new Dimensions(10, 10, 10), 35, "coco");
+        LitMedicalise a4 = new LitMedicalise("0004", "Mario", "", 37, 10, new Dimensions(10, 10, 10), 35, "coco");
 
         ArrayList<Article> array1 = new ArrayList<>();
         array1.add(a1);

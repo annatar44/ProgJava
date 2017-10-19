@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -17,13 +18,14 @@ public class Magasin {
     /**
      * Méthode permettant d'afficher l'ensemble des articles en stock, avec tous les détails
      */
-    public String afficherArticles()
+    public ArrayList<String> afficherArticles()
     {
-        String infoArticles = "";
+        ArrayList<String> infoArticles = new ArrayList<>();
 
         for(Article a : this.articles)
         {
-            infoArticles = "Article " + a.getReference() + " de type " + a.getType();
+            String tmp = "Article " + a.getReference() + " de type " + a.getType();
+            infoArticles.add(tmp);
         }
 
         return infoArticles;
@@ -62,13 +64,14 @@ public class Magasin {
      * Méthode permettant d'afficher l'article correspondant à la marque passée en paramètre
      * @param marque représentant la marque de l'article à afficher
      */
-    public String afficherParMarque(String marque) {
-        String infoMarque = "";
+    public ArrayList<String> afficherParMarque(String marque) {
+        ArrayList<String> infoMarque = new ArrayList<>();
         for(Article a : this.articles)
         {
             if(a.getMarque().equals(marque))
             {
-                infoMarque = "Article " + a.getReference() + " de type " + a.getType();
+                String tmp = "Article " + a.getReference() + " de type " + a.getType();
+                infoMarque.add(tmp);
             }
         }
 
@@ -76,46 +79,51 @@ public class Magasin {
     }
 
     /**
-     * Méthode permettant d'afficher l'article correspondant au prix passé en paramètre
-     * @param prixParJour représentant le prix par jour de location de l'article à afficher
-     */
-    public String afficherParPrix(double prixParJour) {
-        String infoPrix = "";
-
-        for(Article a : this.articles)
-        {
-            if(a.getPrixParJour() == prixParJour)
-            {
-                infoPrix = "Article " + a.getReference() + " de type " + a.getType();
-            }
-        }
-
-        return infoPrix;
-    }
-
-    /**
      * Méthode permettant d'afficher l'article correspondant au modele passée en paramètre
      * @param modele représentant le modele de l'article à afficher
      */
-    public String afficherParModele(String modele) {
-        String infoModele = "";
+    public ArrayList<String> afficherParModele(String modele) {
+        ArrayList<String> infoModele = new ArrayList<>();
 
         for(Article a : this.articles)
         {
             if(a.getModele().equals(modele))
             {
-               infoModele = "Article " + a.getReference() + " de type " + a.getType();
+                String tmp = "Article " + a.getReference() + " de type " + a.getType();
+               infoModele.add(tmp) ;
             }
         }
 
         return infoModele;
     }
 
+    /**
+     * Méthode permettant d'afficher l'article correspondant au prix passé en paramètre
+     * @param prixParJour représentant le prix par jour de location de l'article à afficher
+     */
+    public ArrayList<String> afficherParPrix(double prixParJour) {
+        ArrayList<String> infoPrix = new ArrayList<>();
+
+        for(Article a : this.articles)
+        {
+            if(a.getPrixParJour() == prixParJour)
+            {
+                String tmp = "Article " + a.getReference() + " de type " + a.getType();
+                infoPrix.add(tmp);
+            }
+        }
+
+        return infoPrix;
+    }
+
     public String choixRecherche(int choix) {
         Scanner reader = new Scanner(System.in);
 
         if(choix == 1) {
-            System.out.println(this.afficherArticles());
+            System.out.println("Vous avez choisi de visualiser la liste complète des articles.");
+            for (String s : this.afficherArticles()) {
+                System.out.println(s);
+            }
         }
 
         if(choix == 2) {
@@ -127,20 +135,28 @@ public class Magasin {
         if(choix == 3) {
             System.out.println("Vous avez choisi la recherche par marque ; veuillez saisir un nom de marque :");
             String marque = reader.next();
-            System.out.println(this.afficherParMarque(marque));
+            for (String s : this.afficherParMarque(marque)) {
+                System.out.println(s);
+            }
         }
 
         if(choix == 4) {
             System.out.println("Vous avez choisi la recherche par modele ; veuillez saisir un nom de modele :");
             String modele = reader.next();
-            System.out.println(this.afficherParMarque(modele));
+            for (String s : this.afficherParModele(modele)) {
+                System.out.println(s);
+            }
         }
 
         if(choix == 5) {
             System.out.println("Vous avez choisi la recherche par prix par jour de location ; veuillez saisir un prix :");
             double prixParJour = reader.nextDouble();
-            System.out.println(this.afficherParPrix(prixParJour));
+            for (String s : this.afficherParPrix(prixParJour)) {
+                System.out.println(s);
+            }
         }
+
+        reader.close();
 
         //System.out.println("Veuillez saisir un chiffre entre 1 et 5.");
 
