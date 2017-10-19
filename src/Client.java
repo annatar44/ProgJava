@@ -8,9 +8,9 @@ public class Client {
     private Location location;
     private String nom;
 
-    public Client(String nom, Location location) {
+    public Client(String nom) {
 
-        this.location = location;
+        this.location = new Location();
         this.nom = nom;
     }
 

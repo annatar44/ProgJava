@@ -10,9 +10,13 @@ public class Magasin {
     private ArrayList<Article> articles;
     private ArrayList<Client> clients;
 
-    public Magasin(ArrayList<Article> articles, ArrayList<Client> clients) {
+    public Magasin(ArrayList<Article> articles) {
         this.articles = articles;
-        this.clients = clients;
+        this.clients = new ArrayList<>();
+    }
+
+    public void ajouterClient(Client client) {
+        this.clients.add(client);
     }
 
     /**
