@@ -26,6 +26,6 @@ public class Application {
 
         Magasin m = new Magasin(array1, array2);
 
-        m.afficheArticles();
+        m.afficherArticles();
     }
 }

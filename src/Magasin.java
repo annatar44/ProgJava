@@ -13,7 +13,7 @@ public class Magasin {
         this.clients = clients;
     }
 
-    public void afficheArticles()
+    public void afficherArticles()
     {
         for(Article a : this.articles)
         {
