@@ -1,6 +1,5 @@
 public class TableAlitee extends SupportMedical
 {
-    private static String type = "Table Alitee";
     private String something ;
 
     public TableAlitee(String r, String ma, String mo, double ppj, int nbSt, Dimensions dim, double p, String smthg)
@@ -20,7 +19,7 @@ public class TableAlitee extends SupportMedical
         this.something = s ;
     }
 
-    public static String getType() {
-        return type;
+    public String getType() {
+        return "Table alitée";
     }
 }

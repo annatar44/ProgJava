@@ -1,6 +1,5 @@
 public class SupportMedical extends Article
 {
-    private static String type = "Support Medical";
     private Dimensions dimensions ;
     private double poidsMaxAdmissible ;
 
@@ -32,7 +31,7 @@ public class SupportMedical extends Article
         this.poidsMaxAdmissible = p ;
     }
 
-    public static String getType() {
-        return type;
+    public String getType() {
+        return "Support médical";
     }
 }

@@ -4,9 +4,8 @@ import java.util.Objects;
  * Created by E159453T on 28/09/17.
  */
 public class Article {
+    
     //Attributs
-    private static String type = "Article";
-
     private String reference;
     private String marque;
     private String modele;
@@ -63,8 +62,8 @@ public class Article {
         this.nbStock = nbStock;
     }
 
-    public static String getType() {
-        return type;
+    public String getType() {
+        return "Article";
     }
 
 

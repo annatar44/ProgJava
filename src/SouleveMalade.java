@@ -1,9 +1,8 @@
 /**
  * Created by E159453T on 28/09/17.
  */
-public class SouleveMalade extends Article{
+public class SouleveMalade extends Article {
 
-    private static String type = "Souleve Malade";
     private double capaciteLevage;
     private double pivotageFleau;
 
@@ -29,7 +28,7 @@ public class SouleveMalade extends Article{
         this.pivotageFleau = pivotageFleau;
     }
 
-    public static String getType() {
-        return type;
+    public String getType() {
+        return "Soulève-malade";
     }
 }

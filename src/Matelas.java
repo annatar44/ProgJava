@@ -1,6 +1,5 @@
 public class Matelas extends Article
 {
-    private static String type = "Matelas";
     private Dimensions dimensions ;
     private double poidsMax ;
     private double tempsGonflage ;
@@ -42,5 +41,9 @@ public class Matelas extends Article
     public void setTempsGonflage(double t)
     {
         this.tempsGonflage = t ;
+    }
+
+    public String getType() {
+        return "Matelas";
     }
 }

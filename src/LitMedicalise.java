@@ -1,6 +1,5 @@
 public class LitMedicalise extends SupportMedical
 {
-    private static String type = "Lit Medicalisee";
     private String somethingElse ;
 
     public LitMedicalise(String reference, String marque, String modele, double prixParJour, int nbStock, Dimensions dimensions, double poids, String smthgElse)
@@ -20,7 +19,7 @@ public class LitMedicalise extends SupportMedical
         this.somethingElse = s ;
     }
 
-    public static String getType() {
-        return type;
+    public String getType() {
+        return "Lit médicalisé";
     }
 }

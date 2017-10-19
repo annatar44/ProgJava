@@ -1,10 +1,9 @@
 /**
  * Created by E159453T on 28/09/17.
  */
-public class FauteuilRoulant extends Article{
-    //Attributs
-    private static String type = "Fauteuil Roulant";
+public class FauteuilRoulant extends Article {
 
+    //Attributs
     private double largeurAssise;
     private double poids;
 
@@ -31,7 +30,7 @@ public class FauteuilRoulant extends Article{
         this.poids = poids;
     }
 
-    public static String getType() {
-        return type;
+    public String getType() {
+        return "Fauteuil roulant";
     }
 }
