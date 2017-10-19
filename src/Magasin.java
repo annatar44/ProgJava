@@ -120,7 +120,7 @@ public class Magasin {
         return infoPrix;
     }
 
-    public String choixRecherche(int choix) {
+    public void choixRecherche(int choix) {
         Scanner reader = new Scanner(System.in);
 
         if(choix == 1) {
@@ -163,7 +163,5 @@ public class Magasin {
         reader.close();
 
         //System.out.println("Veuillez saisir un chiffre entre 1 et 5.");
-
-        return null;
     }
 }

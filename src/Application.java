@@ -50,13 +50,22 @@ public class Application {
         System.out.println("Par modèle : 4");
         System.out.println("Par prix pour chaque jour de location : 5");
 
-        Scanner choiceReader = new Scanner(System.in);
-        int choix = choiceReader.nextInt();
+        Scanner choiceReader1 = new Scanner(System.in);
+        int choix = choiceReader1.nextInt();
 
         m.choixRecherche(choix);
 
-        choiceReader.close();
+        choiceReader1.close();
 
-        m.afficherArticles();
+        System.out.println("Saisissez la référence d'un article pour le louer (dans la limite du stock disponible) :");
+
+
+
+        Scanner choiceReader2 = new Scanner(System.in);
+        String ouiNon = choiceReader2.next();
+
+        if(ouiNon.equals("o")) {
+
+        }
     }
 }
