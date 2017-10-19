@@ -30,7 +30,14 @@ public class Application {
 
         Magasin m = new Magasin(array1, array2);
 
-        m.afficherArticles();
-        m.afficherClients();
+//        m.afficherArticles();
+//        m.afficherClients();
+
+        System.out.println("Bonjour ! Bienvenue dans le magasin de Stéphane Plazza. Veuillez choisir le type de recherche que vous souhaitez effectuer :");
+        System.out.println("Afficher tous les articles : 1");
+        System.out.println("Par référence : 2");
+        System.out.println("Par marque : 3");
+        System.out.println("Par modèle : 4");
+        System.out.println("Par prix pour chaque jour de location : 5");
     }
 }
