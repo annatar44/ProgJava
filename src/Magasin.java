@@ -17,7 +17,7 @@ public class Magasin {
     {
         for(Article a : this.articles)
         {
-            System.out.println("Article " + a.getMarque());
+            System.out.println("Article " + a.getReference() + " de type " + a.getType());
         }
     }
 

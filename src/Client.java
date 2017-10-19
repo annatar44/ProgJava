@@ -27,6 +27,10 @@ public class Client {
         return nom;
     }
 
+    public void louerArticle(Article article) {
+        this.location.ajouterArticle(article);
+    }
+
     public void setNom(String nom) {
         this.nom = nom;
     }
