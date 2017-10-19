@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Created by E159453T on 28/09/17.
@@ -16,12 +17,16 @@ public class Magasin {
     /**
      * Méthode permettant d'afficher l'ensemble des articles en stock, avec tous les détails
      */
-    public void afficherArticles()
+    public String afficherArticles()
     {
+        String infoArticles = "";
+
         for(Article a : this.articles)
         {
-            System.out.println("Article " + a.getReference() + " de type " + a.getType());
+            infoArticles = "Article " + a.getReference() + " de type " + a.getType();
         }
+
+        return infoArticles;
     }
 
     /**
@@ -39,55 +44,106 @@ public class Magasin {
      * Méthode permettant d'afficher l'article correspondant à la référence passée en paramètre
      * @param ref représentant la référence de l'article à afficher
      */
-    public void afficherParReference(String ref) {
+    public String afficherParReference(String ref) {
+
+        String infoRef = "";
         for(Article a : this.articles)
         {
             if(a.getReference().equals(ref))
             {
-                System.out.println("Article " + a.getReference() + " de type " + a.getType());
+                infoRef = "Article " + a.getReference() + " de type " + a.getType();
             }
         }
+
+        return infoRef;
     }
 
     /**
      * Méthode permettant d'afficher l'article correspondant à la marque passée en paramètre
      * @param marque représentant la marque de l'article à afficher
      */
-    public void afficherParMarque(String marque) {
+    public String afficherParMarque(String marque) {
+        String infoMarque = "";
         for(Article a : this.articles)
         {
             if(a.getMarque().equals(marque))
             {
-                System.out.println("Article " + a.getReference() + " de type " + a.getType());
+                infoMarque = "Article " + a.getReference() + " de type " + a.getType();
             }
         }
+
+        return infoMarque;
     }
 
     /**
      * Méthode permettant d'afficher l'article correspondant au prix passé en paramètre
      * @param prixParJour représentant le prix par jour de location de l'article à afficher
      */
-    public void afficherParModele(double prixParJour) {
+    public String afficherParPrix(double prixParJour) {
+        String infoPrix = "";
+
         for(Article a : this.articles)
         {
             if(a.getPrixParJour() == prixParJour)
             {
-                System.out.println("Article " + a.getReference() + " de type " + a.getType());
+                infoPrix = "Article " + a.getReference() + " de type " + a.getType();
             }
         }
+
+        return infoPrix;
     }
 
     /**
      * Méthode permettant d'afficher l'article correspondant au modele passée en paramètre
      * @param modele représentant le modele de l'article à afficher
      */
-    public void afficherParModele(String modele) {
+    public String afficherParModele(String modele) {
+        String infoModele = "";
+
         for(Article a : this.articles)
         {
             if(a.getModele().equals(modele))
             {
-                System.out.println("Article " + a.getReference() + " de type " + a.getType());
+               infoModele = "Article " + a.getReference() + " de type " + a.getType();
             }
         }
+
+        return infoModele;
+    }
+
+    public String choixRecherche(int choix) {
+        Scanner reader = new Scanner(System.in);
+
+        if(choix == 1) {
+            System.out.println(this.afficherArticles());
+        }
+
+        if(choix == 2) {
+            System.out.println("Vous avez choisi la recherche par référence ; veuillez saisir la référence de l'article que vous souhaitez trouver :");
+            String reference = reader.next();
+            System.out.println(this.afficherParReference(reference));
+        }
+
+        if(choix == 3) {
+            System.out.println("Vous avez choisi la recherche par marque ; veuillez saisir un nom de marque :");
+            String marque = reader.next();
+            System.out.println(this.afficherParMarque(marque));
+        }
+
+        if(choix == 4) {
+            System.out.println("Vous avez choisi la recherche par modele ; veuillez saisir un nom de modele :");
+            String modele = reader.next();
+            System.out.println(this.afficherParMarque(modele));
+        }
+
+        if(choix == 5) {
+            System.out.println("Vous avez choisi la recherche par prix par jour de location ; veuillez saisir un prix :");
+            double prixParJour = reader.nextDouble();
+            System.out.println(this.afficherParPrix(prixParJour));
+        }
+
+        //System.out.println("Veuillez saisir un chiffre entre 1 et 5.");
+
+        return null;
     }
 }

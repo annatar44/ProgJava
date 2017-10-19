@@ -1,6 +1,7 @@
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Scanner;
 
 /**
  * Created by E159453T on 28/09/17.
@@ -39,5 +40,14 @@ public class Application {
         System.out.println("Par marque : 3");
         System.out.println("Par modèle : 4");
         System.out.println("Par prix pour chaque jour de location : 5");
+
+        Scanner reader = new Scanner(System.in);
+        int choix = reader.nextInt();
+
+        m.choixRecherche(choix);
+
+        reader.close();
+
+        m.afficherArticles();
     }
 }
