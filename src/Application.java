@@ -19,13 +19,18 @@ public class Application {
         array1.add(a3);
         array1.add(a4);
 
-//        Client c1 = new Client("Vieux", a1);
-//        Client c2 = new Client("Guillaume Plaza");
+        Client c1 = new Client("Vieux", new Location());
+        Client c2 = new Client("Guillaume Plaza", new Location());
+        c1.louerArticle(a3);
+        c2.louerArticle(a2, a4);
 
         ArrayList<Client> array2 = new ArrayList<>();
+        array2.add(c1);
+        array2.add(c2);
 
         Magasin m = new Magasin(array1, array2);
 
         m.afficherArticles();
+        m.afficherClients();
     }
 }

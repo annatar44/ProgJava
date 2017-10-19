@@ -11,6 +11,10 @@ public class Location {
         this.articles = articles;
     }
 
+    public Location() {
+        this.articles = new ArrayList<Article>();
+    }
+
     public void ajouterArticle(Article article) {
         this.articles.add(article);
     }

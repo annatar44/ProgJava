@@ -19,16 +19,18 @@ public class Client {
     }
 
     public Location getLocation() {
-
-        return location;
+        return this.location;
     }
 
     public String getNom() {
         return nom;
     }
 
-    public void louerArticle(Article article) {
-        this.location.ajouterArticle(article);
+    public void louerArticle(Article... article) {
+        for (Article a : article)
+        {
+            this.location.ajouterArticle(a);
+        }
     }
 
     public void setNom(String nom) {
