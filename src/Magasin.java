@@ -173,7 +173,5 @@ public class Magasin {
                 System.out.println(s);
             }
         }
-
-        reader.close();
     }
 }

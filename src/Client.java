@@ -57,7 +57,6 @@ public class Client {
         double montant = 0.0; //placeholder
         this.locations.add(new Location(article, coordonnees, dateDebut, dateFin, montant));
         article.decrementeStock();
-        System.out.println("L'article a bien été ajouté à votre panier de locations.");
     }
 
     public void afficherLocations() {

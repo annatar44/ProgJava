@@ -4,12 +4,12 @@ public class Matelas extends Article
     private double poidsMax ;
     private double tempsGonflage ;
 
-    public Matelas(String r, String ma, String mo, double ppj, int nbSt, Dimensions dim, double p, double t)
+    public Matelas(String reference, String marque, String modele, double ppj, int nbStock, Dimensions dim, double poidsMax, double tempsGonflage)
     {
-        super(r, ma, mo, ppj, nbSt) ;
+        super(reference, marque, modele, ppj, nbStock) ;
         this.dimensions = dim ;
-        this.poidsMax = p ;
-        this.tempsGonflage = t ;
+        this.poidsMax = poidsMax ;
+        this.tempsGonflage = tempsGonflage ;
     }
 
     //getter&setter

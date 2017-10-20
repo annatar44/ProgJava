@@ -76,7 +76,9 @@ public class Location {
 
     }
 
+//    public double
+
     public void afficherLocation() {
-        System.out.println("Article " + this.getArticle() + " loué du " + this.getDateDebut() + " au " + this.getDateFin() + " pour la somme de " + this.getMontant() + ". Coordonnées du client : " + this.getCoordonnees());
+        System.out.println(this.getArticle().getType() + " loué du " + this.getDateDebut() + " au " + this.getDateFin() + " pour la somme de " + this.getMontant() + "€. Coordonnées du client : " + this.getCoordonnees());
     }
 }
