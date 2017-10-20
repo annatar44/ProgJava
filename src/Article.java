@@ -66,6 +66,10 @@ public class Article {
         return "Article";
     }
 
+    public void decrementeStock() {
+        --this.nbStock;
+    }
+
 
     @Override
     public boolean equals(Object o) {

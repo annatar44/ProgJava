@@ -30,10 +30,9 @@ public class Client {
         this.nom = nom;
     }
 
-    public void louerArticle(Article... article) {
-        for (Article a : article)
-        {
-            this.locations.add(new Location(a));
-        }
+    public void louerArticle(Article article, String coordonnees, String dateDebut, String dateFin, double montant) {
+        this.locations.add(new Location(article, coordonnees, dateDebut, dateFin, montant));
+        article.decrementeStock();
+        System.out.println("L'article a bien été ajouté à votre panier de locations.");
     }
 }

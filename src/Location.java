@@ -12,6 +12,14 @@ public class Location {
     private String dateFin;
     private double montant;
 
+    public Location(Article article, String coordonnees, String dateDebut, String dateFin, double montant) {
+        this.article = article;
+        this.coordonnees = coordonnees;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.montant = montant;
+    }
+
     public Location(Article article) {
         this.article = article;
     }
