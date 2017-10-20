@@ -1,22 +1,23 @@
+/**
+ * @author Tianyou Ni - Clément Lassalle
+ */
 public class LitMedicalise extends SupportMedical
 {
-    private String somethingElse ;
+    private boolean barrieres ;
 
-    public LitMedicalise(String reference, String marque, String modele, double prixParJour, int nbStock, Dimensions dimensions, double poids, String smthgElse)
+    public LitMedicalise(String reference, String marque, String modele, double prixParJour, int nbStock, Dimensions dimensions, double poids, boolean barrieres)
     {
         super(reference, marque, modele, prixParJour, nbStock, dimensions, poids);
-        this.somethingElse = smthgElse ;
+        this.barrieres = barrieres ;
     }
 
     //getter&setter
-    public String getSomethingElse()
-    {
-        return this.somethingElse ;
+    public boolean isBarrieres() {
+        return barrieres;
     }
 
-    public void setSomethingElse(String s)
-    {
-        this.somethingElse = s ;
+    public void setBarrieres(boolean barrieres) {
+        this.barrieres = barrieres;
     }
 
     public String getType() {

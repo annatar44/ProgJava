@@ -1,5 +1,5 @@
 /**
- * Created by E155074J on 12/10/17.
+ * @author Tianyou Ni - Clément Lassalle
  */
 public class Dimensions {
 

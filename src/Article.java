@@ -1,5 +1,9 @@
 import java.util.Objects;
 
+/**
+ * @author Tianyou Ni - Clément Lassalle
+ * Classe Article représentant un article proposé à la location par la boutique
+ */
 public class Article {
     
     //Attributs

@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Scanner;
 
 /**
- * Created by E159453T on 28/09/17.
+ * @author Tianyou Ni - Clément Lassalle
  */
 public class Application {
 
@@ -17,7 +17,7 @@ public class Application {
         SouleveMalade a1 = new SouleveMalade("0001", "INVACARE", "Moyen", 10.99, 10, 39, 12);
         FauteuilRoulant a2 = new FauteuilRoulant("0002", "INVACARE", "Grand", 13.99, 10, 44, 20);
         Matelas a3 = new Matelas("0003", "OTTOBOCK", "Moyen", 12.99, 10, new Dimensions(200, 100, 50), 100, 40);
-        LitMedicalise a4 = new LitMedicalise("0004", "SOFAMED", "Grand", 20, 10, new Dimensions(200, 150, 60), 35, "coco");
+        LitMedicalise a4 = new LitMedicalise("0004", "SOFAMED", "Grand", 20, 10, new Dimensions(200, 150, 60), 35, true);
 
         ArrayList<Article> array1 = new ArrayList<>();
         array1.add(a1);
@@ -27,11 +27,11 @@ public class Application {
 
         // on instancie les clients
 
-        Client c1 = new Client("Clément Lassalle","Masculin,060605052");
-        Client c2 = new Client("Tianyou Ni","Masculin,060605053");
-        Client c3 = new Client("Simon Plouffe","Masculin,060605050");
-        Client c4 = new Client("Guillaume Connan","Masculin,06060606");
-        Client c5 = new Client("Jean-François Remm","Masculin,060605051");
+        Client c1 = new Client("Clément Lassalle","1 rue des platanes, 060605052");
+        Client c2 = new Client("Tianyou Ni","2 avenue des bosquets, 060605053");
+        Client c3 = new Client("Simon Plouffe","3 rue du pommier, 060605050");
+        Client c4 = new Client("Guillaume Connan","4 avenue du général Sapin, 06060606");
+        Client c5 = new Client("Jean-François Remm","5 impasse des cerisiers, 060605051");
 
         c1.louerArticle(a3, c1.getCoordonnees(), "01/01/2017", "15/01/2017");
         c1.louerArticle(a4, c1.getCoordonnees(), "01/01/2017", "15/01/2017");
@@ -51,7 +51,7 @@ public class Application {
 
         // Et on lance l'application
 
-        System.out.println("Bonjour ! Bienvenue dans le magasin de Stéphane Plazza.");
+        System.out.println("Bonjour, bienvenue dans notre magasin spécialisé en matériel médical.");
 
         Scanner reader = new Scanner(System.in);
 

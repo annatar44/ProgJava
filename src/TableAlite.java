@@ -1,22 +1,23 @@
+/**
+ * @author Tianyou Ni - Clément Lassalle
+ */
 public class TableAlite extends SupportMedical
 {
-    private String something ;
+    private boolean pliante ;
 
-    public TableAlite(String r, String ma, String mo, double ppj, int nbSt, Dimensions dim, double p, String smthg)
+    public TableAlite(String r, String ma, String mo, double ppj, int nbSt, Dimensions dim, double p, boolean pliante)
     {
         super(r, ma, mo, ppj, nbSt, dim, p) ;
-        this.something = smthg ;
+        this.pliante = pliante ;
     }
 
     //getter&setter
-    public String getSomething()
-    {
-        return this.something ;
+    public boolean isPliante() {
+        return pliante;
     }
 
-    public void setSomething(String s)
-    {
-        this.something = s ;
+    public void setPliante(boolean pliante) {
+        this.pliante = pliante;
     }
 
     public String getType() {

@@ -1,3 +1,6 @@
+/**
+ * @author Tianyou Ni - Clément Lassalle
+ */
 public class Matelas extends Article
 {
     private Dimensions dimensions ;
