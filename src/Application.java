@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Scanner;
 
 /**
- * Created by E159453T on 28/09/17.
+ * @author Tianyou Ni - Clément Lassalle
  */
 public class Application {
 

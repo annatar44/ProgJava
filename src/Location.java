@@ -2,7 +2,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 /**
- * Created by E159453T on 28/09/17.
+ * @author Tianyou Ni - Clément Lassalle
  */
 public class Location {
     //Attributs
@@ -73,7 +73,7 @@ public class Location {
     //Méthodes
 
     public void enregistrerLocation() {
-        
+
     }
 
     public void afficherLocation() {

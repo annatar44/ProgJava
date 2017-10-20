@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by E159453T on 28/09/17.
+ * @author Tianyou Ni - Clément Lassalle
  */
 public class Client {
     //Attributs

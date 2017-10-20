@@ -1,3 +1,6 @@
+/**
+ * @author Tianyou Ni - Clément Lassalle
+ */
 public class SupportMedical extends Article
 {
     private Dimensions dimensions ;

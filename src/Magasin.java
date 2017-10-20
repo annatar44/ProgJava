@@ -4,7 +4,8 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * Created by E159453T on 28/09/17.
+ * @author Tianyou Ni - Clément Lassalle
+ * Classe Magasin représentant la boutique, et permettant l'affichage des articles
  */
 public class Magasin {
     //Attributs
