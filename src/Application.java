@@ -7,7 +7,26 @@ import java.util.Scanner;
  * Created by E159453T on 28/09/17.
  */
 public class Application {
+    public static void funcMenuGerant(){
+        System.out.println("Que souhaitez-vous faire ? ");
+        System.out.println("Effectuez une recherche: 1");
+        System.out.println("Afficher l'ensemble des locations en cours pour un client donné: 2");
+        System.out.println("Calculer le montant total des recettes sur une période donnée: 3");
+
+    }
+
+    public static void funcMenuClient(){
+        System.out.println("Que souhaitez-vous faire ? ");
+        System.out.println("Effectuez une recherche: 1");
+        System.out.println("Louez un article: 2");
+        System.out.println("Afficher vos locations: 3");
+
+    }
+
+
     public static void main(String[] args) {
+        System.out.println("Bonjour ! Bienvenue dans le magasin de Stéphane Plazza.");
+        System.out.println("Entrez votre nom afin que nous puissions procéder à la création de votre profil client :");
 
         FauteuilRoulant a1 = new FauteuilRoulant("0001", "INVACARE", "", 10.99, 10, 39, 12);
         FauteuilRoulant a2 = new FauteuilRoulant("0002", "INVACARE", "", 13.99, 10, 44, 20);
@@ -34,38 +53,16 @@ public class Application {
 //        m.afficherArticles();
 //        m.afficherClients();
 
-        System.out.println("Bonjour ! Bienvenue dans le magasin de Stéphane Plazza.");
-        System.out.println("Entrez votre nom afin que nous puissions procéder à la création de votre profil client :");
-
-        Scanner nameReader = new Scanner(System.in);
-        String name = nameReader.next();
-        Client c1 = new Client(name);
-        m.ajouterClient(c1);
-
-        System.out.println("Votre profil client a été créé avec succès.");
-        System.out.println("Veuillez maintenant saisir le chiffre correspondant au mode de recherche que vous souhaitez effectuer :");
-        System.out.println("Afficher tous les articles : 1");
-        System.out.println("Par référence : 2");
-        System.out.println("Par marque : 3");
-        System.out.println("Par modèle : 4");
-        System.out.println("Par prix pour chaque jour de location : 5");
-
-        Scanner choiceReader1 = new Scanner(System.in);
-        int choix = choiceReader1.nextInt();
-
-        m.choixRecherche(choix);
-
-        choiceReader1.close();
-
-        System.out.println("Saisissez la référence d'un article pour le louer (dans la limite du stock disponible) :");
-
-
-
-        Scanner choiceReader2 = new Scanner(System.in);
-        String ouiNon = choiceReader2.next();
-
-        if(ouiNon.equals("o")) {
-
+        System.out.println("Êtes-vous client ou Gérant ? c/g");
+        Scanner menuReader = new Scanner(System.in);
+        String user = menuReader.next();
+        if (user.equals("g")){
+            funcMenuGerant();
         }
+        else if(user.equals("c")) {
+            funcMenuClient();
+        }
+
+
     }
 }
