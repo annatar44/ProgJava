@@ -45,7 +45,7 @@ public class Client {
         this.locations = locations;
     }
 
-    public ArrayList<Location> getLocation() {
+    public ArrayList<Location> getLocations() {
         return this.locations;
     }
 
@@ -69,7 +69,6 @@ public class Client {
             Date date1 = myFormat.parse(tmp1);
             Date date2 = myFormat.parse(tmp2);
             diff = date2.getTime() - date1.getTime();
-            System.out.println("Days: " + TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS));
         } catch (ParseException e) {
             e.printStackTrace();
         }
