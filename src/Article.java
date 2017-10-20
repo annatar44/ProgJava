@@ -1,8 +1,5 @@
 import java.util.Objects;
 
-/**
- * Created by E159453T on 28/09/17.
- */
 public class Article {
     
     //Attributs
@@ -65,11 +62,6 @@ public class Article {
     public String getType() {
         return "Article";
     }
-
-    public void decrementeStock() {
-        --this.nbStock;
-    }
-
 
     @Override
     public boolean equals(Object o) {

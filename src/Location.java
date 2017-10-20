@@ -73,10 +73,8 @@ public class Location {
     //Méthodes
 
     public void enregistrerLocation() {
-
+        
     }
-
-//    public double
 
     public void afficherLocation() {
         System.out.println(this.getArticle().getType() + " loué du " + this.getDateDebut() + " au " + this.getDateFin() + " pour la somme de " + this.getMontant() + "€. Coordonnées du client : " + this.getCoordonnees());

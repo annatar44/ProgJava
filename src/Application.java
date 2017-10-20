@@ -14,10 +14,10 @@ public class Application {
 
         // On instancie les articles
 
-        SouleveMalade a1 = new SouleveMalade("0001", "INVACARE", "", 10.99, 10, 39, 12);
-        FauteuilRoulant a2 = new FauteuilRoulant("0002", "INVACARE", "", 13.99, 10, 44, 20);
-        Matelas a3 = new Matelas("0003", "OTTOBOCK", "", 12.99, 10, new Dimensions(200, 100, 50), 100, 40);
-        LitMedicalise a4 = new LitMedicalise("0004", "Mario", "", 20, 10, new Dimensions(10, 10, 10), 35, "coco");
+        SouleveMalade a1 = new SouleveMalade("0001", "INVACARE", "Moyen", 10.99, 10, 39, 12);
+        FauteuilRoulant a2 = new FauteuilRoulant("0002", "INVACARE", "Grand", 13.99, 10, 44, 20);
+        Matelas a3 = new Matelas("0003", "OTTOBOCK", "Moyen", 12.99, 10, new Dimensions(200, 100, 50), 100, 40);
+        LitMedicalise a4 = new LitMedicalise("0004", "SOFAMED", "Grand", 20, 10, new Dimensions(200, 150, 60), 35, "coco");
 
         ArrayList<Article> array1 = new ArrayList<>();
         array1.add(a1);

@@ -61,7 +61,6 @@ public class Client {
         SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
         double montant = 0.0; //placeholder
         long diff = 0;
-        article.decrementeStock();
         String tmp1 = dateToSimpleDate(dateDebut);
         String tmp2 = dateToSimpleDate(dateFin);
 
