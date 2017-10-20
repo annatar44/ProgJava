@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -10,9 +11,22 @@ public class Magasin {
     private ArrayList<Article> articles;
     private ArrayList<Client> clients;
 
+    public Magasin(ArrayList<Article> articles, ArrayList<Client> clients) {
+        this.articles = articles;
+        this.clients = clients;
+    }
+
     public Magasin(ArrayList<Article> articles) {
         this.articles = articles;
         this.clients = new ArrayList<>();
+    }
+
+    public ArrayList<Article> getArticles() {
+        return articles;
+    }
+
+    public ArrayList<Client> getClients() {
+        return clients;
     }
 
     public void ajouterClient(Client client) {
