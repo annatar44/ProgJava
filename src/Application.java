@@ -23,11 +23,11 @@ public class Application {
 
 
 
-        Client c1 = new Client("Simon Plouffe");
-        Client c2 = new Client("Guillaume Connan");
-        Client c3 = new Client("Jean-François Remm");
-        Client c4 = new Client("Clément Lassalle");
-        Client c5 = new Client("Tianyou Ni");
+        Client c1 = new Client("Simon Plouffe","Masculin,060605050");
+        Client c2 = new Client("Guillaume Connan","Masculin,06060606");
+        Client c3 = new Client("Jean-François Remm","Masculin,060605051");
+        Client c4 = new Client("Clément Lassalle","Masculin,060605052");
+        Client c5 = new Client("Tianyou Ni","Masculin,060605053");
 
         c1.louerArticle(a3, c1.getCoordonnees(), "01/01/2017", "15/01/2017");
         c1.louerArticle(a4, c1.getCoordonnees(), "01/01/2017", "15/01/2017");
@@ -52,8 +52,6 @@ public class Application {
         Scanner reader = new Scanner(System.in);
 
         do {
-
-
             System.out.println("Que souhaitez-vous faire ? ");
             System.out.println("Effectuez une recherche: 1");
             System.out.println("Afficher l'ensemble des locations en cours pour un client donné: 2");
@@ -119,6 +117,7 @@ public class Application {
             else if(choix == 3) {
 
                 System.out.println("Montant total des locations : ");
+
             }
 
             System.out.println("========================================================================================");
@@ -126,9 +125,6 @@ public class Application {
         }
 
         while (quitter != true);
-
-
-
 
 
 //            System.out.println("Entrez votre nom afin que nous puissions initialiser votre profil client :");

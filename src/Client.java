@@ -1,4 +1,8 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by E159453T on 28/09/17.
@@ -54,9 +58,37 @@ public class Client {
     }
 
     public void louerArticle(Article article, String coordonnees, String dateDebut, String dateFin) {
+        SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
         double montant = 0.0; //placeholder
-        this.locations.add(new Location(article, coordonnees, dateDebut, dateFin, montant));
+        long diff = 0;
         article.decrementeStock();
+        String tmp1 = dateToSimpleDate(dateDebut);
+        String tmp2 = dateToSimpleDate(dateFin);
+
+        try {
+            Date date1 = myFormat.parse(tmp1);
+            Date date2 = myFormat.parse(tmp2);
+            diff = date2.getTime() - date1.getTime();
+            System.out.println("Days: " + TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        float days = (diff / (1000 * 60 * 60 * 24));
+        montant = article.getPrixParJour() * days;
+        this.locations.add(new Location(article, coordonnees, dateDebut, dateFin, montant));
+    }
+
+    public String dateToSimpleDate(String date){
+        if (date.contains("/")){
+            String[] parts = date.split("/");
+            String part1 = parts[0];
+            String part2 = parts[1];
+            String part3 = parts[2];
+            date = part1+" "+part2+" "+part3;
+        }else {
+            throw new IllegalArgumentException("Date " + date + " does not contain /");
+        }
+        return date;
     }
 
     public void afficherLocations() {
