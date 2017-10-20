@@ -1,8 +1,8 @@
-public class TableAlitee extends SupportMedical
+public class TableAlite extends SupportMedical
 {
     private String something ;
 
-    public TableAlitee(String r, String ma, String mo, double ppj, int nbSt, Dimensions dim, double p, String smthg)
+    public TableAlite(String r, String ma, String mo, double ppj, int nbSt, Dimensions dim, double p, String smthg)
     {
         super(r, ma, mo, ppj, nbSt, dim, p) ;
         this.something = smthg ;

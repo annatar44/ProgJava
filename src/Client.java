@@ -5,35 +5,35 @@ import java.util.ArrayList;
  */
 public class Client {
     //Attributs
-    private Location location;
+    private ArrayList<Location> locations;
     private String nom;
 
     public Client(String nom) {
 
-        this.location = new Location();
+        this.locations = new ArrayList<>();
         this.nom = nom;
     }
 
-    public void setLocation(Location location) {
-        this.location = location;
+    public void setLocations(ArrayList<Location> locations) {
+        this.locations = locations;
     }
 
-    public Location getLocation() {
-        return this.location;
+    public ArrayList<Location> getLocation() {
+        return this.locations;
     }
 
     public String getNom() {
         return nom;
     }
 
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
     public void louerArticle(Article... article) {
         for (Article a : article)
         {
-            this.location.ajouterArticle(a);
+            this.locations.add(new Location(a));
         }
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
     }
 }
