@@ -175,7 +175,5 @@ public class Magasin {
         }
 
         reader.close();
-
-        //System.out.println("Veuillez saisir un chiffre entre 1 et 5.");
     }
 }
